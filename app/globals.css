@@ -11,7 +11,27 @@
 
 html { scroll-behavior: smooth; }
 
-body { font-family: 'Inter', sans-serif; background-color: #0a0e1a; color: #ffffff; overflow-x: hidden; }
+body {
+  font-family: 'Inter', 'Noto Sans Malayalam', sans-serif;
+  background-color: #0a0e1a;
+  color: #ffffff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-@keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-.ticker-scroll { animation: ticker 20s linear infinite; }
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.malayalam {
+  font-family: 'Noto Sans Malayalam', 'Inter', sans-serif;
+}
+
+/* Ticker scroll */
+.ticker-inner {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker 30s linear infinite;
+}
